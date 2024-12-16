@@ -1,0 +1,282 @@
+/* Reseta o padding e margin de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define o estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Estilos do header */
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.header .toggle-theme {
+    background: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* Define a seção principal, que terá a imagem de fundo */
+.main-section {
+    height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/background\ white.png');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+}
+
+.main-section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 90%;
+}
+
+.book-cover img {
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+
+.book-info {
+    max-width: 500px;
+}
+
+.book-info h2{
+    margin-bottom: 20px;
+}
+
+/* Estilos Gerais da Seção de Módulos */
+.ebook-modules {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.ebook-modules h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ebook-modules p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Contêiner dos Módulos */
+.modules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos dos Módulos Individuais */
+.module {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.module p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Efeito de Hover nos Módulos */
+.module:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .modules {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modules {
+        grid-template-columns: 1fr;
+    }
+
+    .ebook-modules h2 {
+        font-size: 2rem;
+    }
+
+    .ebook-modules p {
+        font-size: 1rem;
+    }
+}
+
+
+.buy-button {
+    background-color: #ff6f61;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buy-button:hover {
+    background-color: #ff4b42;
+}
+
+/* Estilo da seção Sobre o Criador */
+.about-author {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.about-author h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.author-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-text {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilo do footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo para o modo escuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-theme header .toggle-theme {
+    color: #ffffff;
+}
+
+body.dark-theme .main-section {
+    color: #fff;
+    background-image: url('images/background\ black.png');
+}
+
+body.dark-theme .buy-button {
+    background-color: #ff6f61;
+}
+
+body.dark-theme .footer {
+    background-color: #222;
+}
+
+body.dark-theme .author-text {
+    color: #ffffff;
+}
+
+body.dark-theme .about-author {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .ebook-modules{
+    background-color: #121212;
+}
+
+body.dark-theme .ebook-modules h2{
+    color: #ffffff;
+}
+
+body.dark-theme .ebook-modules p#explain{
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .main-section .content {
+        flex-direction: column;
+    }
+
+    .author-info {
+        flex-direction: column;
+    }
+
+    .book-cover img {
+        max-width: 250px;
+    }
+
+    .book-info {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .buy-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .book-info h2 {
+        font-size: 24px;
+    }
+
+    .author-text {
+        font-size: 14px;
+    }
+}

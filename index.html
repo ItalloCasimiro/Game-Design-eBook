@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Design, o Processo de criação de um jogo eBook</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Baixe gratuitamente meu eBook sobre Game Design!</h1>
+            <button class="toggle-theme" onclick="toggleTheme()">🌙 Tema escuro</button>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="content">
+            <div class="book-cover">
+                <img src="images/Capa do ebook white.png" alt="Capa do eBook" id="capa" />
+            </div>
+            <div class="book-info">
+                <h2>Dê seus primeiros passos com meu eBook!</h2>
+                <p>Conheça os fundamentos da área de design de jogos e dê seus
+                    primeiros passos na idealização de um jogo com este eBook</p>
+                <button class="buy-button"><a href="images/Game Design ebook white edition.pdf"download='Game Design ebook white edition.pdf' type="application/pdf">White Edition ⚪</a></button>
+                <button class="buy-button"><a href="images/Game Design ebook Black edition.pdf"download='Game Design ebook Black edition.pdf' type="application/pdf">Black Edition ⚫</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="ebook-modules">
+        <div class="container">
+            <h2>Os Módulos do eBook</h2>
+            <p id="explain">O nosso eBook é dividido em 5 módulos bem elaborados para ajudá-lo a aprender os fundamentos do game design, com exemplos práticos e linguagem sem termos técnicos. Confira os detalhes dos módulos abaixo:</p>
+            <div class="modules">
+                <div class="module">
+                    <h3>Módulo 1: Introdução ao game design</h3>
+                    <p>Seja introduzido a área do design de jogos e
+                        entenda o que faz o profissional</p>
+                </div>
+                <div class="module">
+                    <h3>Módulo 2: Game Design Document</h3>
+                    <p>Conheça a documentação feita por um game
+                        designer, o GDD</p>
+                </div>
+                <div class="module">
+                    <h3>Módulo 3: Criando um bom Level Design</h3>
+                    <p>Conheça os fundamentos sobre o Level
+                        Design e aprenda a criar um nível de jogo</p>
+                </div>
+                <div class="module">
+                    <h3>Módulo 4: Introdução a linguagem C# com a Unity Engine</h3>
+                    <p>Seja introduzido brevemente a programação
+                        com a linguagem c# com a Unity Engine</p>
+                </div>
+                <div class="module">
+                    <h3>Módulo 5: Processo de idealização de um jogo</h3>
+                    <p>Aprenda a como começar a desenvolver um
+                        jogo</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="about-author">
+        <div class="container">
+            <h2>Sobre o Criador</h2>
+            <div class="author-info">
+                <img src="images/profile-image-purple.png" alt="Foto do Autor" class="author-photo" />
+                <div class="author-text">
+                    <p>Itallo Casimiro é um garoto estudante da área de programação
+                        de desenvolvimento de jogos, tanto da área de game design
+                        como de programação, planejando desenvolver um jogo
+                        inovador no futuro com uma equipe sólida de desenvolvedores,
+                        trabalhando como game designer da equipe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Itallo Casimiro</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const image = document.getElementById('capa')
+            body.classList.toggle('dark-theme');
+            const icon = document.querySelector('.toggle-theme');
+            if (body.classList.contains('dark-theme')) {
+                icon.textContent = '🌞 Tema claro';
+                image.src = 'images/capa ebook black.png';
+            } else {
+                icon.textContent = '🌙 Tema escuro';
+                image.src = 'images/Capa do ebook white.png';
+            }
+        }
+    </script>
+</body>
+
+</html>
