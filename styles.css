@@ -195,6 +195,21 @@ a{
     text-align: center;
 }
 
+#portifolio-b{
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    background-color: #ff4b42;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#portifolio-b:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 /* Estilo do footer */
 .footer {
     text-align: center;
