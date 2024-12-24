@@ -126,28 +126,6 @@ a{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade */
-@media screen and (max-width: 1024px) {
-    .modules {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .modules {
-        grid-template-columns: 1fr;
-    }
-
-    .ebook-modules h2 {
-        font-size: 2rem;
-    }
-
-    .ebook-modules p {
-        font-size: 1rem;
-    }
-}
-
-
 .buy-button {
     background-color: #ff6f61;
     border: none;
@@ -278,6 +256,24 @@ body.dark-theme .ebook-modules p#explain{
 
     .book-info {
         max-width: 90%;
+    }
+
+    .modules {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .modules {
+        grid-template-columns: 1fr;
+    }
+
+    .ebook-modules h2 {
+        font-size: 2rem;
+    }
+
+    .ebook-modules p {
+        font-size: 1rem;
     }
 }
 
